@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Cloner le dépôt') {
             steps {
-                git 'https://github.com/nancyranou/Projet_Tchouga_B3'
+               git branch: 'main', url: 'https://github.com/nancyranou/Projet_Tchouga_B3'
+
             }
         }
 
