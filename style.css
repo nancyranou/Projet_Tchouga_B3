@@ -1,16 +1,52 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset basique */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Arial', sans-serif; background:#f4f4f9; color:#333; }
+
+header {
+    background: linear-gradient(90deg,#6a11cb,#2575fc);
+    color: white;
     text-align: center;
     padding: 20px;
-    background-color: #f0f0f0;
 }
 
-a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
+nav a {
+    color: white; text-decoration:none; margin:0 15px;
+    font-weight:bold;
+    transition: color 0.3s;
 }
+nav a:hover { color: #ffd700; }
 
-h1 {
-    color: #444;
+.hero { 
+    text-align:center; padding:50px;
 }
+.hero-text span {
+    color:#ffd700;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%,100%{transform:scale(1);}50%{transform:scale(1.1);} }
+
+.cards {
+    display:flex; justify-content:center; gap:20px; padding:50px;
+}
+.card {
+    background:white; padding:20px; border-radius:15px; box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.card:hover { transform: translateY(-10px); }
+
+.contact-form { display:flex; justify-content:center; padding:50px; }
+.contact-form form {
+    background:white; padding:30px; border-radius:15px; box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    display:flex; flex-direction:column; gap:15px; width:300px;
+}
+.contact-form input, .contact-form textarea {
+    padding:10px; border-radius:8px; border:1px solid #ccc;
+}
+.contact-form button {
+    padding:10px; border:none; border-radius:8px; background:linear-gradient(90deg,#6a11cb,#2575fc);
+    color:white; font-weight:bold; cursor:pointer;
+    transition: background 0.3s;
+}
+.contact-form button:hover { background:linear-gradient(90deg,#2575fc,#6a11cb); }
+
+footer { text-align:center; padding:20px; background:#222; color:white; margin-top:50px; }
