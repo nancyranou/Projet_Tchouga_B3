@@ -1,0 +1,217 @@
+/* =====================
+   Reset & Base
+===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: #f8f9fa; /* blanc cassé */
+    color: #1a1a1a;
+}
+
+/* =====================
+   Header
+===================== */
+header {
+    background: #1E3A8A; /* bleu profond */
+    color: #ffffff;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FFD700; /* accent doré subtil */
+}
+
+/* =====================
+   Hero Section
+===================== */
+.hero {
+    background: url('https://source.unsplash.com/1600x600/?blue,technology') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(30, 58, 138, 0.5); /* overlay bleu semi-transparent */
+}
+
+.hero h2, .hero p {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    animation: fadeInDown 1s ease forwards;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* =====================
+   Features
+===================== */
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.feature {
+    background: #ffffff;
+    flex: 1 1 300px;
+    margin: 15px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
+
+.feature h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #1E3A8A; /* bleu profond */
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555555;
+}
+
+/* =====================
+   Contact Form
+===================== */
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #f8f9fa;
+    color: #1a1a1a;
+    transition: border-color 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #1E3A8A;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #1E3A8A;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #163370;
+}
+
+/* =====================
+   Contact Info
+===================== */
+.contact-info {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #1E3A8A;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    color: #ffffff;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.contact-info strong {
+    font-weight: 700;
+}
+
+/* =====================
+   Footer
+===================== */
+footer {
+    background: #163370; /* bleu sombre */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* =====================
+   Animations
+===================== */
+@keyframes fadeInDown {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+    }
+}
